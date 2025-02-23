@@ -1,8 +1,10 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import { getVehiclesData } from './vehicles_controller.js';
-import { connectMongodb } from './database.js';
-import { MongoClient } from 'mongodb';
+import { connectMongodb } from './database.js';;
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
@@ -19,9 +21,10 @@ app.get('/get-vehicles', getVehiclesData);
 const startServer = async () => {
     try{
 
-        await connectMongodb();
+        await connectMongodb(process.env.mongo_url);
 
-        app.listen(8000);
+        app.listen(process.env.port);
+        
     } catch (err){
         console.log(err);
     }

@@ -2,12 +2,13 @@ import { MongoClient} from "mongodb";
 
 let _db;
 
-export const connectMongodb = async () => {
+export const connectMongodb = async (uri) => {
     try{
         
         console.log("attempting to connect");
         
-        const client = new MongoClient('mongodb+srv://rohit:Rohit123%40@cluster0.ha5sq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        // const client = new MongoClient('mongodb+srv://rohit:Rohit123%40@cluster0.ha5sq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        const client = new MongoClient(uri);
         
         await client.connect();
         
