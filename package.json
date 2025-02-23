@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.1",
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9"
+  },
+  "name": "zylu_assignment_backend",
+  "version": "1.0.0",
+  "description": "Backend for Zylu Business Solutions Flutter Intern role assignment",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohitBB3010/zylu_assignment_backend.git"
+  },
+  "author": "Rohit B. Bhandwalkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohitBB3010/zylu_assignment_backend/issues"
+  },
+  "homepage": "https://github.com/RohitBB3010/zylu_assignment_backend#readme"
+}
